@@ -1,0 +1,207 @@
+:root {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #171717;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --orange: #f7931a;
+  --ink: #171717;
+  --muted: #63666b;
+  --line: #e6e5e1;
+  --cream: #fff3e2;
+  --heading-font: 'Space Grotesk', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--heading-font); }
+.container { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+.eyebrow { color: #99520a; font-size: 12px; font-weight: 700; line-height: 1.3; letter-spacing: .035em; }
+.text-orange { color: var(--orange); }
+.orange-rule { height: 5px; background: var(--orange); border-radius: 3px; }
+.skip-link { position: absolute; z-index: 100; top: -100px; left: 12px; background: var(--ink); color: #fff; padding: 12px 16px; }
+.skip-link:focus { top: 12px; }
+
+/* Header: 'saw' brand + About, Work, Skills only */
+.site-header { background: #fff; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; min-height: 94px; border-bottom: 1px solid var(--line); }
+.brand { font-family: var(--heading-font); font-size: 30px; font-weight: 700; line-height: 1; text-decoration: none; }
+.nav-list { list-style: none; display: flex; align-items: center; gap: 57px; margin: 0; padding: 0 30px 0 0; }
+.nav-link { font-size: 16px; font-weight: 700; text-decoration: none; transition: color 180ms ease; }
+.nav-link:hover { color: #99520a; }
+
+/* Intentional open white space in the current Figma hero (no reintroduced animation) */
+.hero-section { min-height: 729px; }
+.hero-content { padding-top: 68px; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; }
+.eyebrow-dot { width: 7px; height: 7px; border-radius: 100%; background: var(--orange); }
+.hero-title { font-size: clamp(52px, 5.4vw, 70px); line-height: 1.09; letter-spacing: -.045em; font-weight: 700; margin-top: 32px; }
+.hero-statement { margin-top: 26px; font-family: var(--heading-font); font-size: clamp(30px, 3.2vw, 41px); letter-spacing: -.035em; font-weight: 700; line-height: 1.28; }
+.hero-statement p + p { margin-top: 2px; }
+.hero-rule { width: 234px; margin-top: 14px; }
+.hero-description { margin-top: 30px; max-width: 515px; font-size: 19px; font-weight: 400; color: var(--muted); line-height: 1.57; }
+.hero-actions { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 48px; }
+.button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 13px; padding: 0 20px; border-radius: 9px; font-size: 15px; line-height: 1.25; font-weight: 700; text-decoration: none; transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease; }
+.button:hover { transform: translateY(-2px); }
+.button-dark { color: #fff; background: var(--ink); }
+.button-dark:hover { background: #333; box-shadow: 0 5px 16px #00000016; }
+.button-outline { border: 1px solid #d6d4d0; color: var(--ink); background: #fff; }
+.button-outline:hover { background: #f7f7f5; }
+.hero-actions .button:first-child { min-width: 214px; }
+.hero-actions .button:last-child { min-width: 174px; }
+.hero-keywords { color: #99520a; font-size: 12px; font-weight: 700; margin-top: 35px; letter-spacing: .03em; }
+.hero-keywords span { margin-inline: 8px; }
+
+/* Section 01 — Selected project */
+.featured-section { border-top: 1px solid var(--line); }
+.featured-section > .container { padding-top: 61px; padding-bottom: 77px; border-bottom: 1px solid var(--line); }
+.section-eyebrow { margin: 0 0 22px 2px; }
+.section-title { font-size: 44px; font-weight: 700; line-height: 1.15; letter-spacing: -.035em; }
+.section-lead { font-size: 18px; line-height: 1.35; color: var(--muted); margin-top: 15px; }
+.project-card { margin-top: 42px; border: 1px solid var(--line); border-radius: 17px; display: grid; grid-template-columns: 635px minmax(0, 1fr); min-height: 469px; overflow: hidden; background: #fff; }
+.project-art { min-height: 469px; position: relative; background: #fff1dd; padding: 58px 64px; display: flex; align-items: flex-start; justify-content: center; }
+.project-art-accent { position: absolute; width: 8px; top: 0; bottom: 0; left: 0; background: var(--orange); }
+.project-browser { width: 100%; max-width: 500px; height: 348px; border-radius: 13px; border: 1px solid #e7d2b1; background: white; overflow: hidden; }
+.browser-toolbar { height: 45px; display: flex; align-items: center; justify-content: space-between; background: var(--ink); border-radius: 11px 11px 0 0; color: #fff; padding: 0 20px 0 17px; font-size: 13px; font-weight: 500; }
+.browser-dots { display: flex; gap: 4px; }
+.browser-dots img { width: 9px; height: 9px; }
+.browser-main { padding: 28px 26px 20px; }
+.browser-main h3 { font-size: 31px; font-weight: 700; line-height: 1.1; letter-spacing: -.035em; }
+.browser-main > p { color: var(--muted); font-size: 15px; line-height: 1.5; margin-top: 12px; }
+.lesson-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; margin-top: 36px; }
+.lesson-card { height: 89px; background: #f7f7f5; border-radius: 9px; padding: 15px 12px 10px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; }
+.lesson-card-warm { background: #fff0d5; }
+.lesson-icon { position: relative; width: 32px; height: 32px; display: inline-grid; place-items: center; }
+.lesson-icon > img { position: absolute; width: 32px; height: 32px; inset: 0; }
+.lesson-icon > span { position: relative; z-index: 1; color: #fff; font: 700 17px/1 var(--heading-font); }
+.lesson-label { font-size: 11px; line-height: 1.1; font-weight: 700; }
+.project-content { padding: 73px 48px 54px 57px; }
+.project-category { font-size: 13px; letter-spacing: .015em; }
+.project-category span { margin-inline: 8px; }
+.project-content h3 { margin-top: 27px; font-size: 41px; line-height: 1.15; letter-spacing: -.04em; }
+.project-content h3 a { text-decoration: none; }
+.project-content h3 a:hover { color: #99520a; }
+.project-description { font-size: 19px; line-height: 1.53; color: var(--muted); max-width: 470px; margin-top: 27px; }
+.project-button { margin-top: 26px; min-height: 47px; padding-inline: 17px; font-size: 14px; }
+
+/* Section 02 — Reflects the latest Figma contents; deleted skill text is NOT re-added */
+.about-section > .container { padding-top: 51px; }
+.about-statement { min-height: 457px; display: flex; align-items: center; justify-content: center; text-align: center; }
+.about-statement h2 { width: min(820px, 100%); font-size: 43px; line-height: 1.23; font-weight: 700; letter-spacing: -.028em; }
+.education-card { position: relative; background: var(--cream); border-radius: 17px; min-height: 183px; display: grid; grid-template-columns: 505px minmax(0, 1fr); gap: 36px; padding: 24px 38px 24px 28px; overflow: hidden; align-items: center; }
+.education-accent { position: absolute; top: 0; left: 0; bottom: 0; width: 7px; background: var(--orange); }
+.education-topline { display: flex; gap: 12px; align-items: center; }
+.education-emblem { width: 33px; height: 33px; display: inline-grid; place-items: center; flex-shrink: 0; position: relative; }
+.education-emblem img { width: 33px; height: 33px; position: absolute; inset: 0; }
+.education-emblem span { position: relative; color: #fff; font: 700 19px var(--heading-font); }
+.education-topline .eyebrow { font-size: 12px; white-space: nowrap; }
+.divider-slash { margin-inline: 5px; }
+.education-left h3 { font-size: 31px; font-weight: 700; line-height: 1.13; letter-spacing: -.035em; margin-top: 20px; }
+.education-description { color: #61666e; font-size: 17px; line-height: 1.58; }
+
+/* Section 03 — Contact */
+.contact-section { padding-top: 67px; }
+.contact-box { min-height: 317px; background: var(--ink); color: #fff; border-radius: 20px; padding: 39px 45px 45px; }
+.contact-eyebrow { color: #99520a; }
+.contact-box h2 { margin-top: 27px; font-size: 42px; line-height: 1.2; letter-spacing: -.032em; }
+.contact-description { margin-top: 17px; font-size: 18px; color: #cdcdcd; line-height: 1.4; }
+.contact-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 35px; }
+.button-orange { color: var(--ink); background: var(--orange); min-width: 185px; }
+.button-orange:hover { background: #ffab47; }
+.social-button { display: inline-flex; gap: 11px; align-items: center; justify-content: flex-start; min-width: 170px; height: 50px; padding: 0 14px; border-radius: 9px; background: #fff; color: #171717; text-decoration: none; font-size: 15px; font-weight: 700; transition: transform 160ms ease, box-shadow 160ms ease; }
+.social-button:hover { transform: translateY(-2px); box-shadow: 0 6px 18px #ffffff1a; }
+.social-button img { width: 27px; height: 27px; }
+
+.site-footer { color: var(--muted); padding-top: 52px; padding-bottom: 50px; font-size: 14px; line-height: 1.3; }
+
+@media (max-width: 1150px) {
+  .project-card { grid-template-columns: 51% 49%; }
+  .project-art { padding-inline: 36px; }
+  .project-content { padding: 56px 36px; }
+  .project-content h3 { font-size: 37px; }
+  .project-description { font-size: 17px; }
+  .education-card { grid-template-columns: 41% minmax(0, 1fr); gap: 24px; }
+  .education-topline .eyebrow { white-space: normal; }
+  .education-description { font-size: 16px; }
+}
+@media (max-width: 800px) {
+  .header-inner { min-height: 78px; }
+  .nav-list { gap: 26px; padding-right: 0; }
+  .hero-section { min-height: 650px; }
+  .hero-content { padding-top: 65px; }
+  .hero-title { font-size: 60px; }
+  .hero-statement { font-size: 37px; }
+  .featured-section > .container { padding-top: 54px; }
+  .project-card { grid-template-columns: 1fr; }
+  .project-art { min-height: auto; padding: 38px; }
+  .project-content { padding: 40px; }
+  .project-description { max-width: 680px; }
+  .about-statement { min-height: 360px; }
+  .about-statement h2 { font-size: 36px; }
+  .education-card { grid-template-columns: 1fr; gap: 20px; padding: 28px; }
+  .contact-box h2 { font-size: 35px; }
+}
+@media (max-width: 520px) {
+  .container { width: min(100% - 36px, 1240px); }
+  .header-inner { min-height: 69px; }
+  .brand { font-size: 28px; }
+  .nav-list { gap: 18px; }
+  .nav-link { font-size: 13px; }
+  .eyebrow { font-size: 11px; }
+  .hero-section { min-height: 605px; }
+  .hero-content { padding-top: 56px; }
+  .hero-title { font-size: clamp(44px, 11vw, 55px); margin-top: 26px; }
+  .hero-statement { margin-top: 20px; font-size: clamp(28px, 7.2vw, 35px); }
+  .hero-rule { margin-top: 17px; width: 170px; }
+  .hero-description { font-size: 16px; line-height: 1.65; margin-top: 26px; }
+  .hero-actions { margin-top: 36px; gap: 10px; }
+  .button { min-height: 46px; padding-inline: 14px; font-size: 13px; }
+  .hero-actions .button:first-child, .hero-actions .button:last-child { min-width: 0; }
+  .hero-keywords { margin-top: 28px; font-size: 10px; }
+  .hero-keywords span { margin-inline: 4px; }
+  .featured-section > .container { padding-top: 42px; padding-bottom: 52px; }
+  .section-eyebrow { margin-bottom: 16px; }
+  .section-title { font-size: 35px; }
+  .section-lead { font-size: 15px; line-height: 1.55; }
+  .project-card { margin-top: 26px; }
+  .project-art { padding: 26px 24px; }
+  .project-browser { height: auto; min-height: 250px; }
+  .browser-main { padding: 24px 17px 22px; }
+  .browser-main h3 { font-size: 25px; }
+  .browser-main > p { font-size: 12px; }
+  .lesson-cards { gap: 8px; margin-top: 24px; }
+  .lesson-card { padding: 12px 7px 9px; height: 80px; }
+  .lesson-label { font-size: 9px; }
+  .project-content { padding: 31px 25px 35px; }
+  .project-category { font-size: 11px; }
+  .project-content h3 { font-size: 33px; margin-top: 20px; }
+  .project-description { font-size: 16px; margin-top: 18px; }
+  .project-button { margin-top: 25px; }
+  .about-section > .container { padding-top: 42px; }
+  .about-statement { min-height: 280px; }
+  .about-statement h2 { font-size: clamp(27px, 6.9vw, 34px); }
+  .about-desktop-break { display: none; }
+  .education-topline .eyebrow { font-size: 10px; }
+  .education-left h3 { font-size: 27px; }
+  .education-description { font-size: 15px; }
+  .contact-section { padding-top: 46px; }
+  .contact-box { padding: 29px 24px 33px; }
+  .contact-box h2 { font-size: 30px; }
+  .contact-description { font-size: 15px; line-height: 1.6; }
+  .contact-actions { gap: 9px; margin-top: 26px; }
+  .button-orange { width: 100%; }
+  .social-button { min-width: 0; flex: 1; padding: 0 12px; font-size: 13px; gap: 7px; }
+  .social-button img { width: 25px; height: 25px; }
+  .site-footer { padding-top: 33px; padding-bottom: 32px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button, .social-button, .nav-link { transition: none; }
+}
