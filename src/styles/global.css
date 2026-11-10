@@ -29,7 +29,7 @@ h1, h2, h3 { font-family: var(--heading-font); }
 .skip-link { position: absolute; z-index: 100; top: -100px; left: 12px; background: var(--ink); color: #fff; padding: 12px 16px; }
 .skip-link:focus { top: 12px; }
 
-/* Header: 'saw' brand + About, Work, Skills only */
+/* Header and primary navigation */
 .site-header { background: #fff; }
 .header-inner { display: flex; justify-content: space-between; align-items: center; min-height: 94px; border-bottom: 1px solid var(--line); }
 .brand { font-family: var(--heading-font); font-size: 30px; font-weight: 700; line-height: 1; text-decoration: none; }
@@ -107,6 +107,9 @@ h1, h2, h3 { font-family: var(--heading-font); }
 .education-description { color: #61666e; font-size: 17px; line-height: 1.58; }
 
 /* Section 03 — Contact */
+.certifications-section { padding-top: 51px; }
+.certifications-section ul { margin: 16px 0 0; padding-inline-start: 24px; line-height: 1.65; }
+
 .contact-section { padding-top: 67px; }
 .contact-box { min-height: 317px; background: var(--ink); color: #fff; border-radius: 20px; padding: 39px 45px 45px; }
 .contact-eyebrow { color: #99520a; }
@@ -152,7 +155,7 @@ h1, h2, h3 { font-family: var(--heading-font); }
   .container { width: min(100% - 36px, 1240px); }
   .header-inner { min-height: 69px; }
   .brand { font-size: 28px; }
-  .nav-list { gap: 18px; }
+  .nav-list { gap: 12px; }
   .nav-link { font-size: 13px; }
   .eyebrow { font-size: 11px; }
   .hero-section { min-height: 605px; }

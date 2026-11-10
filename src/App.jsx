@@ -14,6 +14,13 @@ export default function App() {
         <Hero />
         <FeaturedWork />
         <AboutExpertise />
+        <section className="certifications-section container" id="certifications" aria-labelledby="certifications-title">
+          <h2 id="certifications-title">Certifications</h2>
+          <ul>
+            <li>On-Chain Analysis for Beginners · Binance</li>
+            <li>Crypto Risk Management · Binance</li>
+          </ul>
+        </section>
         <Contact />
       </main>
       <Footer />
