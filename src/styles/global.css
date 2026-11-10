@@ -108,7 +108,17 @@ h1, h2, h3 { font-family: var(--heading-font); }
 
 /* Section 03 — Contact */
 .certifications-section { padding-top: 51px; }
-.certifications-section ul { margin: 16px 0 0; padding-inline-start: 24px; line-height: 1.65; }
+.certifications-card { border: 1px solid var(--line); border-radius: 20px; overflow: hidden; }
+.certifications-card h2 { padding: 20px clamp(12px, 3vw, 26px); }
+.certifications-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.certifications-table th, .certifications-table td { padding: 14px clamp(6px, 2vw, 24px); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.certifications-table thead { background: var(--cream); }
+.certifications-table thead th { width: 50%; font-size: .85rem; text-transform: uppercase; letter-spacing: .035em; }
+.certifications-table thead th:first-child { width: 22%; }
+.certifications-table thead th:last-child { width: 28%; }
+.certifications-group th { border-top: 1px solid var(--line); color: #99520a; font-size: .85rem; text-transform: uppercase; letter-spacing: .035em; }
+.certifications-table td { border-top: 1px solid var(--line); color: var(--muted); line-height: 1.45; }
+.certifications-table .credential-title { color: var(--ink); font-weight: 700; }
 
 .contact-section { padding-top: 67px; }
 .contact-box { min-height: 317px; background: var(--ink); color: #fff; border-radius: 20px; padding: 39px 45px 45px; }
@@ -157,6 +167,7 @@ h1, h2, h3 { font-family: var(--heading-font); }
   .brand { font-size: 28px; }
   .nav-list { gap: 12px; }
   .nav-link { font-size: 13px; }
+  .certifications-table td { font-size: .8125rem; }
   .eyebrow { font-size: 11px; }
   .hero-section { min-height: 605px; }
   .hero-content { padding-top: 56px; }
